@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Audio Samples from "EVASS: Emotional Variational End-to-End Speech Synthesis with Semi-Supervised and Adverserial Learning"</title>
+    <style>
+      div {
+        margin-bottom: 64px;
+      }
+      .first-col {
+        padding-right: 40px;
+        white-space: nowrap;
+      }
+      .emotion {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1>Audio Samples from "EVASS: Emotional Variational End-to-End Speech Synthesis with Semi-Supervised and Adverserial Learning"</h1>
+      </header>
+    </article>
+    <div>
+      <b>Abstract:</b> Communicating one's inner state - their emotions and feelings - forms one of the core principles of social communication and behavior in humans. Emotion is an important component of speech, and its inclusion in synthetic speech will allow for breakthroughs in applications like human-machine interfacing, e-book reading, and voice acting. However, modelling emotions in speech in an end-to-end manner has so far remained an under-explored topic of research. To address this, we experiment with novel methods in global emotional modelling in unsupervised, semi-supervised and adverserial contexts using an end-to-end text-to-speech (TTS) architecture. We condition the latent space, duration prediction and audio generation on novel hybrid labels based on ground truth data - 14 emotion labels, 64 sentiment analysis labels, and speaker labels - which may be inferred from input text during inference. Experiments on conditional discriminators were also performed. The final proposed model produces high quality expressive results comparable to the state of the art.
+      <div>
+        <audio controls preload="none"><source src="wavs/abs.wav"></audio>
+      </div>
+    </div>
+    <div>
+      <a name="ss"><h2>Comparison between different models and emotions: "A friendly waiter taught me a few words of Italian"</h2></a>
+      <hr>
+      <table>
+        <tbody>
+        <tr>
+          <td>
+            <h4>Emotion</h4>
+          </td>
+          <td class="emotion">
+              Angry
+          </td>
+          <td class="emotion">
+              Happy
+          </td>
+          <td class="emotion">
+              Sad
+          </td>
+          <td class="emotion">
+              Neutral
+          </td>
+        </tr>
+        <tr>
+          <td class="first-col">Ours</td>
+          <td><audio controls="" preload="none"><source src="wavs/angry/ours.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/happy/ours.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/sad/ours.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/neutral/ours.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">15.ai</td>
+          <td><audio controls="" preload="none"><source src="wavs/angry/15.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/happy/15.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/sad/15.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/neutral/15.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">Cai, Xiong, et al</td>
+          <td><audio controls="" preload="none"><source src="wavs/angry/cai.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/happy/cai.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/sad/cai.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/neutral/cai.wav"></audio></td>
+        </tr>
+        </tbody>
+      </table>
+      <hr>
+
+      <h4>Notes regarding the comparison</h4>
+      We matched conditioning information whenever possible, including emoji conditioning and speaker identity. For our model and 15.ai prompts conferring appropriate emotions were used to generate the conditioning emoji.
+
+      <h4>References</h4>
+      15.ai samples gotten from <a href="https://15.ai">the official website.</a> <br>
+      Cai, Xiong, et all samples gotten from the <a href="https://thuhcsi.github.io/icassp2021-emotion-tts/emo4cls_demo.html"> official demo page samples</a>
+    </div>
+  </body>
+</html>
